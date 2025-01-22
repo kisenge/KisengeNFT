@@ -248,6 +248,10 @@
 				"type": "event"
 			},
 			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -575,6 +579,10 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -743,6 +751,14 @@
 		"remappings": []
 	},
 	"sources": {
+		"@openzeppelin/contracts/utils/Counters.sol": {
+			"keccak256": "0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee",
+				"dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu"
+			]
+		},
 		"@openzeppelin/contracts@5.1.0/interfaces/IERC165.sol": {
 			"keccak256": "0xde7e9fd9aee8d4f40772f96bb3b58836cbc6dfc0227014a061947f8821ea9724",
 			"license": "MIT",
@@ -904,11 +920,11 @@
 			]
 		},
 		"contract-6c763d8912.sol": {
-			"keccak256": "0xf5590dc5322fc80aa46651830b20553807e39930234278b78a68600442cd3c22",
+			"keccak256": "0x1c57dbc2b3dad206dbe01124baf8bb6c8a199f9e8d306cd62e194c8c83d80e09",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e16c010aa2dd9ef78f1669fc544b653420ef390c81fc90d196755ec2f787ef32",
-				"dweb:/ipfs/QmaeRJNMfM8CBtR6T7fgL6GFGMG8qQohx8NHb28aTXqR8K"
+				"bzz-raw://2c12fdc4eda9e19c0c5cbdd835816a07f82a4476a77908aaa071cdd844fa87b0",
+				"dweb:/ipfs/QmR9KbgSZRKF6wN1Cj2wyyHFvkXZR8fdXkDo2arm3waT2E"
 			]
 		}
 	},

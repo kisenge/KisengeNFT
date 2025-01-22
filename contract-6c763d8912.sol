@@ -5,17 +5,23 @@ pragma solidity ^0.8.22;
 import {ERC721} from "@openzeppelin/contracts@5.1.0/token/ERC721/ERC721.sol";
 import {ERC721Enumerable} from "@openzeppelin/contracts@5.1.0/token/ERC721/extensions/ERC721Enumerable.sol";
 import {ERC721URIStorage} from "@openzeppelin/contracts@5.1.0/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 
 contract KisengeNFT is ERC721, ERC721Enumerable, ERC721URIStorage{
     uint256 private _nextTokenId;
+    Counters.Counter private _tokenIdCounter;
+    uint256 MAX_SUPPLY = 100000;
 
     constructor(address initialOwner)
         ERC721("KisengeNFT", "KNFT")
-    {}
+    {
+        _nextTokenId=0;
+    }
 
     function safeMint(address to, string memory uri) public {
         uint256 tokenId = _nextTokenId++;
+        require(tokenId<= MAX_SUPPLY, "I'm sorry we reached the cap");
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
     }
@@ -54,4 +60,10 @@ contract KisengeNFT is ERC721, ERC721Enumerable, ERC721URIStorage{
     {
         return super.supportsInterface(interfaceId);
     }
+
+
+    receive() external payable {}
+
+    fallback() external payable {}
+
 }
