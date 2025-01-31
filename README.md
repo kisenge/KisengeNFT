@@ -9,7 +9,7 @@
 
 
 
-# Purpose
+## Purpose
 
 The purpose of this project was to learn more about crypto technologies- more specifically about writing and deploying basic smart contracts. I am very new to the space and this is my first crypto based project. I primarily followed the Alchemy tutorial at 
 [Alchemy NFT Tutorial](https://docs.alchemy.com/docs/how-to-develop-an-nft-smart-contract-erc721-with-alchemy)
@@ -17,7 +17,7 @@ The purpose of this project was to learn more about crypto technologies- more sp
 
 
 
-# Technology/Stack Used
+## Technology/Stack Used
 
 - The contract was written in the Solidity language.
 - The contract was written using the Remix IDE
